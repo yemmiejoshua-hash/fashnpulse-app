@@ -1,0 +1,127 @@
+Nigerian Fashion Marketplace
+UI Sitemap + Project Documentation
+
+1. Project Overview
+A modern multi-vendor fashion marketplace tailored for Nigeria, enabling buyers and sellers to interact seamlessly.
+Key Features: - Multi-vendor system - Nigerian fashion categories (corporate, casual, native) - Real-time chat (buyer-seller + AI chatbot) - Payment integration (Paystack/Flutterwave) - Order tracking (real-time updates) - WhatsApp & call-based customer support (NO email)
+
+2. UI Sitemap Diagram
+                        [ HOME PAGE ]
+                              |
+        -------------------------------------------------
+        |                |               |               |
+     [Auth]         [Products]        [Cart]         [Chat]
+        |                |               |               |
+  --------------    --------------      |      ----------------------
+  |            |    |     |     |       |      |                    |
+Login       Register  Corporate Casual Native  Checkout   Buyer-Seller Chat
+                                               |          AI Chat Assistant
+                                               |
+                                           [Orders]
+                                               |
+                                      -----------------
+                                      |               |
+                              Order Tracking     Order History
+
+        -------------------------------------------------
+        |                                               |
+   [Profile]                                      [Seller Dashboard]
+        |                                               |
+  ------------------                        -----------------------------
+  |                |                        |      |         |          |
+Buyer Info     Settings               Products  Orders   Analytics   Chat
+
+3. Core Pages & UI Structure
+Home Page
+Hero banner (Nigerian fashion visuals)
+Categories (Corporate, Casual, Native)
+Featured products
+Trending sellers
+CTA buttons
+
+Authentication Pages
+Login (Buyer/Seller)
+Register (Buyer/Seller)
+
+Product Pages
+Product Listing
+Filters (category, price, location)
+Product grid
+Product Details
+Image gallery
+Description
+Reviews & ratings
+Seller info
+Add to cart
+
+Cart & Checkout
+Cart summary
+Quantity control
+Checkout form
+Payment integration (Paystack/Flutterwave)
+
+Orders Section
+Order History
+List of orders
+Order Tracking
+Real-time updates:
+Pending
+Confirmed
+Shipped
+Out for delivery
+Delivered
+
+Chat System
+Buyer-Seller Chat
+Real-time messaging
+Chat list
+Message history
+AI Chat Assistant
+FAQ automation
+Instant responses
+
+User Profile
+Personal details
+Orders
+Settings
+
+Seller Dashboard
+Product management (CRUD)
+Orders management
+Sales analytics
+Chat with buyers
+
+4. Tech Architecture
+Frontend: - Next.js (App Router) - Tailwind CSS
+Backend: - Node.js + Express
+Database: - Supabase (PostgreSQL + Realtime)
+Payments: - Paystack / Flutterwave
+Support: - WhatsApp integration - Call button - AI chatbot
+
+5. Database Overview
+Users - id - name - email - role
+Products - id - title - price - category - seller_id
+Orders - id - user_id - status
+Messages - id - sender_id - receiver_id - message
+Reviews - id - rating - comment
+
+6. User Flow
+User signs up/login
+Browses products
+Adds to cart
+Checkout & payment
+Tracks order
+Chats with seller or AI
+
+7. UI/UX Guidelines
+Mobile-first design
+Clean and modern layout
+African-inspired colors
+High-quality Nigerian fashion imagery
+
+8. Deployment
+Frontend: Vercel
+Backend: Render / Railway
+Database: Supabase
+
+End of Document
