@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { supabase } from '@/utils/supabase';
+import { supabase } from '../../../utils/supabase';
 import { useRouter } from 'next/navigation';
 
 export default function Register() {
@@ -44,7 +44,7 @@ export default function Register() {
         email: email,
         role: 'buyer'
       });
-      
+
       if (dbError) {
         // Safe fail (user might already exist or trigger handled it)
         console.error('Error inserting to public.users:', dbError.message);
@@ -66,40 +66,40 @@ export default function Register() {
         <form onSubmit={handleRegister} className="space-y-6">
           <div className="space-y-2">
             <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Full Name</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary" 
-              placeholder="Enter your full name" 
-              required 
+              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary"
+              placeholder="Enter your full name"
+              required
             />
           </div>
           <div className="space-y-2">
             <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Email</label>
-            <input 
-              type="email" 
+            <input
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary" 
-              placeholder="Enter your email" 
-              required 
+              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary"
+              placeholder="Enter your email"
+              required
             />
           </div>
           <div className="space-y-2">
             <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Password</label>
-            <input 
-              type="password" 
+            <input
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary" 
-              placeholder="Create a password" 
-              required 
+              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary"
+              placeholder="Create a password"
+              required
             />
           </div>
-          
-          <button 
-            type="submit" 
+
+          <button
+            type="submit"
             disabled={loading}
             className="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:bg-primary-dim transition-colors disabled:opacity-70"
           >

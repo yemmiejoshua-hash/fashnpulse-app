@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { supabase } from '@/utils/supabase';
+import { supabase } from '../../../utils/supabase';
 import { useRouter } from 'next/navigation';
 
 export default function Login() {
@@ -41,29 +41,29 @@ export default function Login() {
         <form onSubmit={handleLogin} className="space-y-6">
           <div className="space-y-2">
             <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Email</label>
-            <input 
-              type="email" 
+            <input
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary" 
-              placeholder="Enter your email" 
-              required 
+              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary"
+              placeholder="Enter your email"
+              required
             />
           </div>
           <div className="space-y-2">
             <label className="block text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Password</label>
-            <input 
-              type="password" 
+            <input
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary" 
-              placeholder="Enter your password" 
-              required 
+              className="w-full bg-surface-container-highest border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-primary"
+              placeholder="Enter your password"
+              required
             />
           </div>
-          
-          <button 
-            type="submit" 
+
+          <button
+            type="submit"
             disabled={loading}
             className="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:bg-primary-dim transition-colors disabled:opacity-70"
           >
